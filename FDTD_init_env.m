@@ -1,7 +1,7 @@
 % FDTD_init_env.m
 % Basic FDTD Engine
 
-% Initialise matlab/octave
+% Initialise MATLAB/Octave
 close all;
 clc;
 clear all;

@@ -19,7 +19,7 @@ figure('color', 'w')
 % FDTD parameters
 dz = 0.006; % grid resolution in the z direction
 Nz = 200; % 200 points in the grid
-dt = 1e-11; % time step (0.1ps)
+dt = 0.1e-12; % time step (0.1ps)
 STEPS = 1000; % 1000 time steps
 
 %% Construct device on grid %%

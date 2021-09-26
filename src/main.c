@@ -1,4 +1,4 @@
-/* Bare-bones 1D FDTD simulation with a hard source. */
+/* Bare-bones 1D FDTD simulation with a source. */
 
 #include <stdio.h>
 #include <math.h>

@@ -15,13 +15,15 @@ int main()
 
      /* begin time stepping */
      for (qTime = 0; qTime < maxTime; qTime++) {
-
-         hy[SIZE-1] = hy[SIZE-2]; // simple ABC, I think...
+         
+         /* simple ABC, I think... */
+         hy[SIZE-1] = hy[SIZE-2]; 
          /* update magnetic field */
          for (mm = 0; mm < SIZE - 1; mm++)
          hy[mm] = hy[mm] + (ez[mm + 1] - ez[mm]) / imp0;
-
-         ez[0] = ez[1]; // simple ABC, I think... again...
+      
+         /* simple ABC, I think... again... */
+         ez[0] = ez[1]; 
 
          /* update electric field */
          for (mm = 1; mm < SIZE; mm++)

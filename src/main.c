@@ -1,4 +1,3 @@
-/* 1D FDTD simulationb with an additive source */
 #include <stdio.h>
 #include <math.h>
 
@@ -14,13 +13,15 @@ int main()
     /* file pointer used for output files */
     FILE *snapshot;
 
-     /* do time stepping */
+     /* begin time stepping */
      for (qTime = 0; qTime < maxTime; qTime++) {
 
-
+         hy[SIZE-1] = hy[SIZE-2]; // simple ABC, I think...
          /* update magnetic field */
          for (mm = 0; mm < SIZE - 1; mm++)
          hy[mm] = hy[mm] + (ez[mm + 1] - ez[mm]) / imp0;
+
+         ez[0] = ez[1]; // simple ABC, I think... again...
 
          /* update electric field */
          for (mm = 1; mm < SIZE; mm++)
@@ -48,6 +49,4 @@ int main()
  } /* end of time-stepping */
 
  return 0;
-}
-
 }
